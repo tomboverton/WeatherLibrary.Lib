@@ -19,6 +19,11 @@ namespace WeatherLibrary.Lib
                     forecast.Temperature = "72f";
                     forecast.Conditions = "Sunny";
                     break;
+                case "Austin":
+                    forecast.City = _City;
+                    forecast.Temperature = "87f";
+                    forecast.Conditions = "Partly Cloudy";
+                    break;
                 default:
                     forecast.City = "N/A";
                     forecast.Temperature = "0f";
