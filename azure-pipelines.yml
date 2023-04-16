@@ -18,6 +18,13 @@ steps:
   inputs:
     versionSpec: 
     checkLatest: true
+
+- task: DotNetCoreCLI@2
+  displayName: Restore
+  inputs:
+     command: 'restore'
+     projects: '**/*.sln'
+     feedsToUse: 'select'
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
