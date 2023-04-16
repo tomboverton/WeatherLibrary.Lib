@@ -14,6 +14,10 @@ steps:
   inputs:
     version: '$(dotnetSdkVersion)'
 
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 
+    checkLatest: true
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
